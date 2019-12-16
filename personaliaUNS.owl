@@ -171,6 +171,10 @@
         <Class abbreviatedIRI="fea:Commission"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="parl:Leader"/>
+        <Class IRI="#LPPM"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="swrc:Lecturer"/>
         <Class abbreviatedIRI="foaf:Person"/>
     </SubClassOf>
@@ -197,6 +201,10 @@
     <SubClassOf>
         <Class abbreviatedIRI="akt:Secretary"/>
         <Class abbreviatedIRI="fea:Commission"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="akt:Secretary"/>
+        <Class IRI="#LPPM"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#BadanPengelolaUsaha"/>
