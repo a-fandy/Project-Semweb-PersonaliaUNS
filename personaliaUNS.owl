@@ -31,6 +31,7 @@
     <Prefix name="vivo" IRI="http://vivoweb.org/ontology/core#"/>
     <Prefix name="aiiso" IRI="http://purl.org/vocab/aiiso/schema#"/>
     <Prefix name="ostop" IRI="http://www.ordnancesurvey.co.uk/ontology/Topography/v0.1/Topography.owl#"/>
+    <Prefix name="caresses" IRI="http://caressesrobot.org/ontology#"/>
     <Prefix name="dbpedia-owl" IRI="http://dbpedia.org/ontology/"/>
     <Declaration>
         <Class abbreviatedIRI="dbpedia-owl:Chancellor"/>
@@ -102,7 +103,13 @@
         <Class abbreviatedIRI="foaf:Person"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasChancellor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Dr._JAMAL_WIWOHO,_S.H.,_M.Hum"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Rektor_UNS"/>
@@ -203,6 +210,10 @@
         <Class abbreviatedIRI="dbpedia-owl:Chancellor"/>
     </SubClassOf>
     <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Dr._JAMAL_WIWOHO,_S.H.,_M.Hum"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="dbpedia-owl:Chancellor"/>
         <NamedIndividual IRI="#Rektor_UNS"/>
     </ClassAssertion>
@@ -210,6 +221,11 @@
         <Class abbreviatedIRI="vivo:University"/>
         <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
     </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Rektor_UNS"/>
+        <NamedIndividual IRI="#Prof._Dr._JAMAL_WIWOHO,_S.H.,_M.Hum"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasChancellor"/>
         <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
