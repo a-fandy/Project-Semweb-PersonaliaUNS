@@ -110,6 +110,9 @@
         <ObjectProperty IRI="#hasBadanPengelolaUsaha"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasBiroLeader"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasChancellor"/>
     </Declaration>
     <Declaration>
@@ -372,9 +375,65 @@
         <ObjectProperty abbreviatedIRI="swpo:hasLeader"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasViceChancellor"/>
+        <ObjectProperty IRI="#hasChancellor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="cdesc:hasCommission"/>
         <ObjectProperty IRI="#hasSenator"/>
     </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <Class abbreviatedIRI="dbpedia-owl:Chancellor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasChancellor"/>
+        <Class abbreviatedIRI="vivo:University"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSenator"/>
+        <Class abbreviatedIRI="vivo:University"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasStaffAhliRektor"/>
+        <Class abbreviatedIRI="vivo:University"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasViceChancellor"/>
+        <Class abbreviatedIRI="vivo:University"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="cdesc:hasCommission"/>
+        <Class abbreviatedIRI="dbpedia-owl:Senator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasChancellor"/>
+        <Class abbreviatedIRI="dbpedia-owl:Chancellor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSenator"/>
+        <Class abbreviatedIRI="dbpedia-owl:Senator"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasStaffAhliRektor"/>
+        <Class IRI="#StaffAhli"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasViceChancellor"/>
+        <Class IRI="#ViceChancellor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="cdesc:hasCommission"/>
+        <Class abbreviatedIRI="fea:Commission"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="cdesc:hasCommission"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </ObjectPropertyRange>
 </Ontology>
 
 
