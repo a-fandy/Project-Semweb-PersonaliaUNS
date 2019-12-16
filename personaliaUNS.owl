@@ -1,22 +1,12 @@
 <?xml version="1.0"?>
-
-
-<!DOCTYPE Ontology [
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-]>
-
-
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.semanticweb.org/semweb/uns/personaliauns"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/semweb/uns/personaliauns">
-    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.semanticweb.org/semweb/uns/personaliauns#"/>
     <Prefix name="akt" IRI="http://www.aktors.org/ontology/portal#"/>
     <Prefix name="fea" IRI="http://vocab.data.gov/def/fea#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -27,9 +17,11 @@
     <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
     <Prefix name="parl" IRI="http://reference.data.gov.uk/def/parliament/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="swpo" IRI="http://sw-portal.deri.org/ontologies/swportal#"/>
     <Prefix name="swrc" IRI="http://swrc.ontoware.org/ontology#"/>
     <Prefix name="vivo" IRI="http://vivoweb.org/ontology/core#"/>
     <Prefix name="aiiso" IRI="http://purl.org/vocab/aiiso/schema#"/>
+    <Prefix name="cdesc" IRI="https://w3id.org/arco/ontology/context-description/"/>
     <Prefix name="ostop" IRI="http://www.ordnancesurvey.co.uk/ontology/Topography/v0.1/Topography.owl#"/>
     <Prefix name="caresses" IRI="http://caressesrobot.org/ontology#"/>
     <Prefix name="dbpedia-owl" IRI="http://dbpedia.org/ontology/"/>
@@ -91,6 +83,12 @@
         <Class IRI="#PimpinanUniversitas"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#PusatPengembangan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PusatStudi"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#StaffAhli"/>
     </Declaration>
     <Declaration>
@@ -106,10 +104,55 @@
         <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="swpo:hasLeader"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBadanPengelolaUsaha"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasChancellor"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasDekan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDirector"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasDivision"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFaculty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLPPM"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLPPMP"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLeaderSecretary"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPusatPengembangan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPusatStudi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSecretary"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSenator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStaffAhliRektor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasUPT"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasVice"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasViceChancellor"/>
@@ -121,10 +164,7 @@
         <ObjectProperty IRI="#isPersonOf"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Prof._Dr._Ir._AHMAD_YUNUS,_M.S."/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Prof._Dr._JAMAL_WIWOHO,_S.H.,_M.Hum"/>
+        <ObjectProperty abbreviatedIRI="cdesc:hasCommission"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Rektor_UNS"/>
@@ -137,6 +177,12 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Dr._Ir._AHMAD_YUNUS,_M.S."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Dr._JAMAL_WIWOHO,_S.H.,_M.Hum"/>
     </Declaration>
     <EquivalentClasses>
         <Class abbreviatedIRI="cgov:Director"/>
@@ -175,6 +221,10 @@
         <Class IRI="#LPPM"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="parl:Leader"/>
+        <Class IRI="#LPPMP"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="swrc:Lecturer"/>
         <Class abbreviatedIRI="foaf:Person"/>
     </SubClassOf>
@@ -207,6 +257,10 @@
         <Class IRI="#LPPM"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="akt:Secretary"/>
+        <Class IRI="#LPPMP"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#BadanPengelolaUsaha"/>
         <Class IRI="#UnitKerja"/>
     </SubClassOf>
@@ -227,6 +281,14 @@
         <Class abbreviatedIRI="ostop:Structure"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#PusatPengembangan"/>
+        <Class IRI="#LPPMP"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PusatStudi"/>
+        <Class IRI="#LPPM"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#StaffAhli"/>
         <Class IRI="#UnitKerja"/>
     </SubClassOf>
@@ -238,14 +300,6 @@
         <Class IRI="#ViceChancellor"/>
         <Class abbreviatedIRI="dbpedia-owl:Chancellor"/>
     </SubClassOf>
-    <ClassAssertion>
-        <Class abbreviatedIRI="foaf:Person"/>
-        <NamedIndividual IRI="#Prof._Dr._Ir._AHMAD_YUNUS,_M.S."/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="foaf:Person"/>
-        <NamedIndividual IRI="#Prof._Dr._JAMAL_WIWOHO,_S.H.,_M.Hum"/>
-    </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="dbpedia-owl:Chancellor"/>
         <NamedIndividual IRI="#Rektor_UNS"/>
@@ -262,11 +316,14 @@
         <Class IRI="#ViceChancellor"/>
         <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
     </ClassAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isPersonOf"/>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Dr._Ir._AHMAD_YUNUS,_M.S."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
         <NamedIndividual IRI="#Prof._Dr._JAMAL_WIWOHO,_S.H.,_M.Hum"/>
-        <NamedIndividual IRI="#Rektor_UNS"/>
-    </ObjectPropertyAssertion>
+    </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
         <NamedIndividual IRI="#Rektor_UNS"/>
@@ -297,9 +354,30 @@
         <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
         <NamedIndividual IRI="#WR_Bidang_Akademik_UNS"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Prof._Dr._JAMAL_WIWOHO,_S.H.,_M.Hum"/>
+        <NamedIndividual IRI="#Rektor_UNS"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasFaculty"/>
+        <ObjectProperty IRI="#hasDekan"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSecretary"/>
+        <ObjectProperty abbreviatedIRI="swpo:hasLeader"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasVice"/>
+        <ObjectProperty abbreviatedIRI="swpo:hasLeader"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="cdesc:hasCommission"/>
+        <ObjectProperty IRI="#hasSenator"/>
+    </SubObjectPropertyOf>
 </Ontology>
 
 
 
-<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 

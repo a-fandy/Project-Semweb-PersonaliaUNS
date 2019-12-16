@@ -1,0 +1,24 @@
+[PrefixDeclaration]
+:		http://www.semanticweb.org/semweb/uns/personaliauns#
+akt:		http://www.aktors.org/ontology/portal#
+fea:		http://vocab.data.gov/def/fea#
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+xml:		http://www.w3.org/XML/1998/namespace
+xsd:		http://www.w3.org/2001/XMLSchema#
+cgov:		http://reference.data.gov.uk/def/central-government/
+foaf:		http://xmlns.com/foaf/0.1/
+parl:		http://reference.data.gov.uk/def/parliament/
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+swpo:		http://sw-portal.deri.org/ontologies/swportal#
+swrc:		http://swrc.ontoware.org/ontology#
+vivo:		http://vivoweb.org/ontology/core#
+aiiso:		http://purl.org/vocab/aiiso/schema#
+cdesc:		https://w3id.org/arco/ontology/context-description/
+ostop:		http://www.ordnancesurvey.co.uk/ontology/Topography/v0.1/Topography.owl#
+caresses:	http://caressesrobot.org/ontology#
+dbpedia-owl:	http://dbpedia.org/ontology/
+
+[MappingDeclaration] @collection [[
+]]
+
