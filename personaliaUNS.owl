@@ -109,6 +109,21 @@
         <ObjectProperty IRI="#hasChancellor"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasDivision"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasViceChancellor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isChancellorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPersonOf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Dr._Ir._AHMAD_YUNUS,_M.S."/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Prof._Dr._JAMAL_WIWOHO,_S.H.,_M.Hum"/>
     </Declaration>
     <Declaration>
@@ -116,6 +131,12 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WR_Bidang_Akademik_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
     </Declaration>
     <EquivalentClasses>
         <Class abbreviatedIRI="cgov:Director"/>
@@ -211,6 +232,10 @@
     </SubClassOf>
     <ClassAssertion>
         <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Dr._Ir._AHMAD_YUNUS,_M.S."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
         <NamedIndividual IRI="#Prof._Dr._JAMAL_WIWOHO,_S.H.,_M.Hum"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -221,15 +246,48 @@
         <Class abbreviatedIRI="vivo:University"/>
         <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
     </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ViceChancellor"/>
+        <NamedIndividual IRI="#WR_Bidang_Akademik_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ViceChancellor"/>
+        <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Prof._Dr._JAMAL_WIWOHO,_S.H.,_M.Hum"/>
+        <NamedIndividual IRI="#Rektor_UNS"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
         <NamedIndividual IRI="#Rektor_UNS"/>
         <NamedIndividual IRI="#Prof._Dr._JAMAL_WIWOHO,_S.H.,_M.Hum"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isChancellorOf"/>
+        <NamedIndividual IRI="#Rektor_UNS"/>
+        <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasChancellor"/>
         <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
         <NamedIndividual IRI="#Rektor_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasViceChancellor"/>
+        <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
+        <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#WR_Bidang_Akademik_UNS"/>
+        <NamedIndividual IRI="#Prof._Dr._Ir._AHMAD_YUNUS,_M.S."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDivision"/>
+        <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
+        <NamedIndividual IRI="#WR_Bidang_Akademik_UNS"/>
     </ObjectPropertyAssertion>
 </Ontology>
 
