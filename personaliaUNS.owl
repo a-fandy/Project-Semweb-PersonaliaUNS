@@ -1,10 +1,20 @@
 <?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.semanticweb.org/semweb/uns/personaliauns"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/semweb/uns/personaliauns">
     <Prefix name="" IRI="http://www.semanticweb.org/semweb/uns/personaliauns#"/>
     <Prefix name="akt" IRI="http://www.aktors.org/ontology/portal#"/>
@@ -164,13 +174,154 @@
         <ObjectProperty IRI="#isChancellorOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isCommissionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDivisionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLeaderOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isPersonOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSecretaryOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSenatorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isViceChancellorOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="cdesc:hasCommission"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Dr._Agung_Budiharjo,_S.Si,_M.Si."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dr._BANDI,_M.Si.,_Ak."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dr._Istijabatul_Aliyah,_S.T.,_M.T."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ketua_Komisi_A_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ketua_Komisi_B_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ketua_Komisi_C_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ketua_Komisi_D_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ketua_Komisi_E_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ketua_Komisi_F_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ketua_Senat_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Komisi_A_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Komisi_B_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Komisi_C_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Komisi_D_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Komisi_E_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Komisi_F_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Komisi_Senat_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof.Dr._ADI_SULISTIYONO,_S.H.,M.H"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Dr._Agr.Sc._Ir._Vita_Ratri_Cahyani,_M.P."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Dr._Cucuk_Nur_Rosyidi,_S.T.,_M.T."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Dr._Dwi_Aries_Himawanto,_S.T.,_M.T."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Dr._Ir._AHMAD_YUNUS,_M.S."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Dr._JAMAL_WIWOHO,_S.H.,_M.Hum"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Dr._KUNCORO_DIHARJO,_S.T.,_M.T."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Dr._Sigit_Santosa,_M.Pd."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Dr._Srilistyowati,_dr._Sp.OG."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Dr._Sunardi,_M.Sc."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Dr._Suyitno,_M.Pd."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Dr._Trisno_Martono,_M.M."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Dr.rer.nat._SAJIDAN,_M.Si."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Drs._HASAN_FAUZI,_MBA,_Ph.D.,_Ak"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Drs._Suranto_Tjiptowibisono,_M.Sc.,_Ph.D"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Techn_Suyitno,_S.T.,_M.T."/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Rektor_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sekretaris_Komisi_A_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sekretaris_Komisi_B_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sekretaris_Komisi_C_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sekretaris_Komisi_D_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sekretaris_Komisi_E_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sekretaris_Komisi_F_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sekretaris_Senat_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Senat_UNS"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
@@ -179,13 +330,16 @@
         <NamedIndividual IRI="#WR_Bidang_Akademik_UNS"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#WR_Bidang_Kemahasiswaan_dan_Alumni_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WR_Bidang_Perencanaan_dan_Kerja_Sama_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WR_Bidang_Umum_dan_Keuangan_UNS"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Prof._Dr._Ir._AHMAD_YUNUS,_M.S."/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Prof._Dr._JAMAL_WIWOHO,_S.H.,_M.Hum"/>
     </Declaration>
     <EquivalentClasses>
         <Class abbreviatedIRI="cgov:Director"/>
@@ -304,8 +458,172 @@
         <Class abbreviatedIRI="dbpedia-owl:Chancellor"/>
     </SubClassOf>
     <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Dr._Agung_Budiharjo,_S.Si,_M.Si."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Dr._BANDI,_M.Si.,_Ak."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Dr._Istijabatul_Aliyah,_S.T.,_M.T."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="parl:Leader"/>
+        <NamedIndividual IRI="#Ketua_Komisi_A_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="parl:Leader"/>
+        <NamedIndividual IRI="#Ketua_Komisi_B_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="parl:Leader"/>
+        <NamedIndividual IRI="#Ketua_Komisi_C_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="parl:Leader"/>
+        <NamedIndividual IRI="#Ketua_Komisi_D_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="parl:Leader"/>
+        <NamedIndividual IRI="#Ketua_Komisi_E_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="parl:Leader"/>
+        <NamedIndividual IRI="#Ketua_Komisi_F_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="parl:Leader"/>
+        <NamedIndividual IRI="#Ketua_Senat_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="fea:Commission"/>
+        <NamedIndividual IRI="#Komisi_A_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="fea:Commission"/>
+        <NamedIndividual IRI="#Komisi_B_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="fea:Commission"/>
+        <NamedIndividual IRI="#Komisi_C_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="fea:Commission"/>
+        <NamedIndividual IRI="#Komisi_D_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="fea:Commission"/>
+        <NamedIndividual IRI="#Komisi_E_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="fea:Commission"/>
+        <NamedIndividual IRI="#Komisi_F_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="fea:Commission"/>
+        <NamedIndividual IRI="#Komisi_Senat_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof.Dr._ADI_SULISTIYONO,_S.H.,M.H"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Dr._Agr.Sc._Ir._Vita_Ratri_Cahyani,_M.P."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Dr._Cucuk_Nur_Rosyidi,_S.T.,_M.T."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Dr._Dwi_Aries_Himawanto,_S.T.,_M.T."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Dr._Ir._AHMAD_YUNUS,_M.S."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Dr._JAMAL_WIWOHO,_S.H.,_M.Hum"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Dr._KUNCORO_DIHARJO,_S.T.,_M.T."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Dr._Sigit_Santosa,_M.Pd."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Dr._Srilistyowati,_dr._Sp.OG."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Dr._Sunardi,_M.Sc."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Dr._Suyitno,_M.Pd."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Dr._Trisno_Martono,_M.M."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Dr.rer.nat._SAJIDAN,_M.Si."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Drs._HASAN_FAUZI,_MBA,_Ph.D.,_Ak"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Drs._Suranto_Tjiptowibisono,_M.Sc.,_Ph.D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Techn_Suyitno,_S.T.,_M.T."/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="dbpedia-owl:Chancellor"/>
         <NamedIndividual IRI="#Rektor_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="akt:Secretary"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_A_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="akt:Secretary"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_B_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="akt:Secretary"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_C_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="akt:Secretary"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_D_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="akt:Secretary"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_E_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="akt:Secretary"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_F_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="akt:Secretary"/>
+        <NamedIndividual IRI="#Sekretaris_Senat_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dbpedia-owl:Senator"/>
+        <NamedIndividual IRI="#Senat_UNS"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="vivo:University"/>
@@ -317,16 +635,290 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#ViceChancellor"/>
+        <NamedIndividual IRI="#WR_Bidang_Kemahasiswaan_dan_Alumni_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ViceChancellor"/>
+        <NamedIndividual IRI="#WR_Bidang_Perencanaan_dan_Kerja_Sama_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ViceChancellor"/>
+        <NamedIndividual IRI="#WR_Bidang_Umum_dan_Keuangan_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ViceChancellor"/>
         <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
     </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="foaf:Person"/>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Dr._Agung_Budiharjo,_S.Si,_M.Si."/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_D_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Dr._BANDI,_M.Si.,_Ak."/>
+        <NamedIndividual IRI="#WR_Bidang_Umum_dan_Keuangan_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Dr._Istijabatul_Aliyah,_S.T.,_M.T."/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_C_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Ketua_Komisi_A_UNS"/>
+        <NamedIndividual IRI="#Prof._Dr._Agr.Sc._Ir._Vita_Ratri_Cahyani,_M.P."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLeaderOf"/>
+        <NamedIndividual IRI="#Ketua_Komisi_A_UNS"/>
+        <NamedIndividual IRI="#Komisi_A_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Ketua_Komisi_B_UNS"/>
+        <NamedIndividual IRI="#Prof._Drs._Suranto_Tjiptowibisono,_M.Sc.,_Ph.D"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLeaderOf"/>
+        <NamedIndividual IRI="#Ketua_Komisi_B_UNS"/>
+        <NamedIndividual IRI="#Komisi_B_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Ketua_Komisi_C_UNS"/>
+        <NamedIndividual IRI="#Prof._Dr._Trisno_Martono,_M.M."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLeaderOf"/>
+        <NamedIndividual IRI="#Ketua_Komisi_C_UNS"/>
+        <NamedIndividual IRI="#Komisi_C_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Ketua_Komisi_D_UNS"/>
+        <NamedIndividual IRI="#Prof._Dr._Suyitno,_M.Pd."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLeaderOf"/>
+        <NamedIndividual IRI="#Ketua_Komisi_D_UNS"/>
+        <NamedIndividual IRI="#Komisi_D_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Ketua_Komisi_E_UNS"/>
+        <NamedIndividual IRI="#Prof._Dr._Sigit_Santosa,_M.Pd."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLeaderOf"/>
+        <NamedIndividual IRI="#Ketua_Komisi_E_UNS"/>
+        <NamedIndividual IRI="#Komisi_E_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Ketua_Komisi_F_UNS"/>
+        <NamedIndividual IRI="#Prof._Dr._Sunardi,_M.Sc."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLeaderOf"/>
+        <NamedIndividual IRI="#Ketua_Komisi_F_UNS"/>
+        <NamedIndividual IRI="#Komisi_F_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Ketua_Senat_UNS"/>
+        <NamedIndividual IRI="#Prof.Dr._ADI_SULISTIYONO,_S.H.,M.H"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="swpo:hasLeader"/>
+        <NamedIndividual IRI="#Komisi_A_UNS"/>
+        <NamedIndividual IRI="#Ketua_Komisi_A_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSecretary"/>
+        <NamedIndividual IRI="#Komisi_A_UNS"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_A_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCommissionOf"/>
+        <NamedIndividual IRI="#Komisi_A_UNS"/>
+        <NamedIndividual IRI="#Komisi_Senat_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="swpo:hasLeader"/>
+        <NamedIndividual IRI="#Komisi_B_UNS"/>
+        <NamedIndividual IRI="#Ketua_Komisi_B_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCommissionOf"/>
+        <NamedIndividual IRI="#Komisi_B_UNS"/>
+        <NamedIndividual IRI="#Komisi_Senat_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="swpo:hasLeader"/>
+        <NamedIndividual IRI="#Komisi_C_UNS"/>
+        <NamedIndividual IRI="#Ketua_Komisi_C_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSecretary"/>
+        <NamedIndividual IRI="#Komisi_C_UNS"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_C_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCommissionOf"/>
+        <NamedIndividual IRI="#Komisi_C_UNS"/>
+        <NamedIndividual IRI="#Komisi_Senat_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="swpo:hasLeader"/>
+        <NamedIndividual IRI="#Komisi_D_UNS"/>
+        <NamedIndividual IRI="#Ketua_Komisi_D_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSecretary"/>
+        <NamedIndividual IRI="#Komisi_D_UNS"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_D_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCommissionOf"/>
+        <NamedIndividual IRI="#Komisi_D_UNS"/>
+        <NamedIndividual IRI="#Komisi_Senat_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="swpo:hasLeader"/>
+        <NamedIndividual IRI="#Komisi_E_UNS"/>
+        <NamedIndividual IRI="#Ketua_Komisi_E_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSecretary"/>
+        <NamedIndividual IRI="#Komisi_E_UNS"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_E_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCommissionOf"/>
+        <NamedIndividual IRI="#Komisi_E_UNS"/>
+        <NamedIndividual IRI="#Komisi_Senat_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="swpo:hasLeader"/>
+        <NamedIndividual IRI="#Komisi_F_UNS"/>
+        <NamedIndividual IRI="#Ketua_Komisi_F_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSecretary"/>
+        <NamedIndividual IRI="#Komisi_F_UNS"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_F_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isCommissionOf"/>
+        <NamedIndividual IRI="#Komisi_F_UNS"/>
+        <NamedIndividual IRI="#Komisi_Senat_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDivision"/>
+        <NamedIndividual IRI="#Komisi_Senat_UNS"/>
+        <NamedIndividual IRI="#Komisi_B_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDivision"/>
+        <NamedIndividual IRI="#Komisi_Senat_UNS"/>
+        <NamedIndividual IRI="#Komisi_A_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDivision"/>
+        <NamedIndividual IRI="#Komisi_Senat_UNS"/>
+        <NamedIndividual IRI="#Komisi_D_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDivision"/>
+        <NamedIndividual IRI="#Komisi_Senat_UNS"/>
+        <NamedIndividual IRI="#Komisi_E_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDivision"/>
+        <NamedIndividual IRI="#Komisi_Senat_UNS"/>
+        <NamedIndividual IRI="#Komisi_C_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Prof.Dr._ADI_SULISTIYONO,_S.H.,M.H"/>
+        <NamedIndividual IRI="#Ketua_Senat_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Prof._Dr._Agr.Sc._Ir._Vita_Ratri_Cahyani,_M.P."/>
+        <NamedIndividual IRI="#Ketua_Komisi_A_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Prof._Dr._Cucuk_Nur_Rosyidi,_S.T.,_M.T."/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_A_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Prof._Dr._Dwi_Aries_Himawanto,_S.T.,_M.T."/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_F_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
         <NamedIndividual IRI="#Prof._Dr._Ir._AHMAD_YUNUS,_M.S."/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#WR_Bidang_Akademik_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
         <NamedIndividual IRI="#Prof._Dr._JAMAL_WIWOHO,_S.H.,_M.Hum"/>
-    </ClassAssertion>
+        <NamedIndividual IRI="#Rektor_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Prof._Dr._KUNCORO_DIHARJO,_S.T.,_M.T."/>
+        <NamedIndividual IRI="#WR_Bidang_Kemahasiswaan_dan_Alumni_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Prof._Dr._Sigit_Santosa,_M.Pd."/>
+        <NamedIndividual IRI="#Ketua_Komisi_E_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Prof._Dr._Srilistyowati,_dr._Sp.OG."/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_E_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Prof._Dr._Sunardi,_M.Sc."/>
+        <NamedIndividual IRI="#Ketua_Komisi_F_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Prof._Dr._Suyitno,_M.Pd."/>
+        <NamedIndividual IRI="#Ketua_Komisi_D_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Prof._Dr._Trisno_Martono,_M.M."/>
+        <NamedIndividual IRI="#Ketua_Komisi_C_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Prof._Dr.rer.nat._SAJIDAN,_M.Si."/>
+        <NamedIndividual IRI="#WR_Bidang_Perencanaan_dan_Kerja_Sama_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Prof._Drs._HASAN_FAUZI,_MBA,_Ph.D.,_Ak"/>
+        <NamedIndividual IRI="#Sekretaris_Senat_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Prof._Drs._Suranto_Tjiptowibisono,_M.Sc.,_Ph.D"/>
+        <NamedIndividual IRI="#Ketua_Komisi_B_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Prof._Techn_Suyitno,_S.T.,_M.T."/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_B_UNS"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
         <NamedIndividual IRI="#Rektor_UNS"/>
@@ -338,9 +930,104 @@
         <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_A_UNS"/>
+        <NamedIndividual IRI="#Prof._Dr._Cucuk_Nur_Rosyidi,_S.T.,_M.T."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isSecretaryOf"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_A_UNS"/>
+        <NamedIndividual IRI="#Komisi_A_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_B_UNS"/>
+        <NamedIndividual IRI="#Prof._Techn_Suyitno,_S.T.,_M.T."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isSecretaryOf"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_B_UNS"/>
+        <NamedIndividual IRI="#Komisi_B_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_C_UNS"/>
+        <NamedIndividual IRI="#Dr._Istijabatul_Aliyah,_S.T.,_M.T."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isSecretaryOf"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_C_UNS"/>
+        <NamedIndividual IRI="#Komisi_C_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_D_UNS"/>
+        <NamedIndividual IRI="#Dr._Agung_Budiharjo,_S.Si,_M.Si."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isSecretaryOf"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_D_UNS"/>
+        <NamedIndividual IRI="#Komisi_D_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_E_UNS"/>
+        <NamedIndividual IRI="#Prof._Dr._Srilistyowati,_dr._Sp.OG."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isSecretaryOf"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_E_UNS"/>
+        <NamedIndividual IRI="#Komisi_E_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_F_UNS"/>
+        <NamedIndividual IRI="#Prof._Dr._Dwi_Aries_Himawanto,_S.T.,_M.T."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isSecretaryOf"/>
+        <NamedIndividual IRI="#Sekretaris_Komisi_F_UNS"/>
+        <NamedIndividual IRI="#Komisi_F_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Sekretaris_Senat_UNS"/>
+        <NamedIndividual IRI="#Prof._Drs._HASAN_FAUZI,_MBA,_Ph.D.,_Ak"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isSecretaryOf"/>
+        <NamedIndividual IRI="#Sekretaris_Senat_UNS"/>
+        <NamedIndividual IRI="#Senat_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="swpo:hasLeader"/>
+        <NamedIndividual IRI="#Senat_UNS"/>
+        <NamedIndividual IRI="#Ketua_Senat_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSecretary"/>
+        <NamedIndividual IRI="#Senat_UNS"/>
+        <NamedIndividual IRI="#Sekretaris_Senat_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isSenatorOf"/>
+        <NamedIndividual IRI="#Senat_UNS"/>
+        <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="cdesc:hasCommission"/>
+        <NamedIndividual IRI="#Senat_UNS"/>
+        <NamedIndividual IRI="#Komisi_Senat_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasChancellor"/>
         <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
         <NamedIndividual IRI="#Rektor_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSenator"/>
+        <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
+        <NamedIndividual IRI="#Senat_UNS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasViceChancellor"/>
@@ -353,14 +1040,64 @@
         <NamedIndividual IRI="#Prof._Dr._Ir._AHMAD_YUNUS,_M.S."/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDivisionOf"/>
+        <NamedIndividual IRI="#WR_Bidang_Akademik_UNS"/>
+        <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#WR_Bidang_Kemahasiswaan_dan_Alumni_UNS"/>
+        <NamedIndividual IRI="#Prof._Dr._KUNCORO_DIHARJO,_S.T.,_M.T."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDivisionOf"/>
+        <NamedIndividual IRI="#WR_Bidang_Kemahasiswaan_dan_Alumni_UNS"/>
+        <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#WR_Bidang_Perencanaan_dan_Kerja_Sama_UNS"/>
+        <NamedIndividual IRI="#Prof._Dr.rer.nat._SAJIDAN,_M.Si."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDivisionOf"/>
+        <NamedIndividual IRI="#WR_Bidang_Perencanaan_dan_Kerja_Sama_UNS"/>
+        <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#WR_Bidang_Umum_dan_Keuangan_UNS"/>
+        <NamedIndividual IRI="#Dr._BANDI,_M.Si.,_Ak."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDivisionOf"/>
+        <NamedIndividual IRI="#WR_Bidang_Umum_dan_Keuangan_UNS"/>
+        <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDivision"/>
         <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
         <NamedIndividual IRI="#WR_Bidang_Akademik_UNS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#isPersonOf"/>
-        <NamedIndividual IRI="#Prof._Dr._JAMAL_WIWOHO,_S.H.,_M.Hum"/>
-        <NamedIndividual IRI="#Rektor_UNS"/>
+        <ObjectProperty IRI="#hasDivision"/>
+        <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
+        <NamedIndividual IRI="#WR_Bidang_Umum_dan_Keuangan_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDivision"/>
+        <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
+        <NamedIndividual IRI="#WR_Bidang_Perencanaan_dan_Kerja_Sama_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDivision"/>
+        <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
+        <NamedIndividual IRI="#WR_Bidang_Kemahasiswaan_dan_Alumni_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isViceChancellorOf"/>
+        <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
+        <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
     </ObjectPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasFaculty"/>
@@ -438,5 +1175,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
 
