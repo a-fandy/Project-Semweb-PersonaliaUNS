@@ -21,6 +21,7 @@
     <Prefix name="fea" IRI="http://vocab.data.gov/def/fea#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="wlo" IRI="http://purl.org/ontology/wo/"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="cgov" IRI="http://reference.data.gov.uk/def/central-government/"/>
@@ -33,6 +34,8 @@
     <Prefix name="aiiso" IRI="http://purl.org/vocab/aiiso/schema#"/>
     <Prefix name="cdesc" IRI="https://w3id.org/arco/ontology/context-description/"/>
     <Prefix name="ostop" IRI="http://www.ordnancesurvey.co.uk/ontology/Topography/v0.1/Topography.owl#"/>
+    <Prefix name="medred" IRI="http://w3id.org/medred/medred#"/>
+    <Prefix name="dcterms" IRI="http://purl.org/dc/terms/"/>
     <Prefix name="caresses" IRI="http://caressesrobot.org/ontology#"/>
     <Prefix name="dbpedia-owl" IRI="http://dbpedia.org/ontology/"/>
     <Declaration>
@@ -72,6 +75,9 @@
         <Class abbreviatedIRI="fea:Office"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="medred:Study"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="akt:Secretary"/>
     </Declaration>
     <Declaration>
@@ -84,10 +90,22 @@
         <Class IRI="#Dekan"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#HMP"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#KelasMataKuliah"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#LPPM"/>
     </Declaration>
     <Declaration>
         <Class IRI="#LPPMP"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Matakuliah"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Member"/>
     </Declaration>
     <Declaration>
         <Class IRI="#PimpinanUniversitas"/>
@@ -102,10 +120,16 @@
         <Class IRI="#StaffAhli"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#UKM"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#UnitKerja"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ViceChancellor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Organization"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="foaf:Person"/>
@@ -129,6 +153,9 @@
         <ObjectProperty IRI="#hasDekan"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasDepartment"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasDirector"/>
     </Declaration>
     <Declaration>
@@ -138,6 +165,12 @@
         <ObjectProperty IRI="#hasFaculty"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasHMP"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasKelasMataKuliah"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasLPPM"/>
     </Declaration>
     <Declaration>
@@ -145,6 +178,15 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasLeaderSecretary"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLecturer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMatakuliah"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMember"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasPusatPengembangan"/>
@@ -162,6 +204,12 @@
         <ObjectProperty IRI="#hasStaffAhliRektor"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasStudent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasUKM"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasUPT"/>
     </Declaration>
     <Declaration>
@@ -177,10 +225,28 @@
         <ObjectProperty IRI="#isCommissionOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isDepartmentOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isDivisionOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isFacultyOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isHMP"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isKelasMataKuliahOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isLeaderOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLecturerOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isMemberOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isPersonOf"/>
@@ -192,10 +258,76 @@
         <ObjectProperty IRI="#isSenatorOf"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isStaffAhliRektorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isStudentOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isUKM"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isViceChancellorOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="cdesc:hasCommission"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dcterms:title"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="wlo:name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#NIM"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#NIP"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Semester"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#endPeriode"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#startPeriode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Andreas_Fandy_Dwi_N"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dekan_FEB_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dekan_FH_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dekan_FIB_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dekan_FISIP_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dekan_FKIP_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dekan_FKOR_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dekan_FK_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dekan_FMIPA_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dekan_FP_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dekan_FSRD_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dekan_FT_UNS"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Dr._Agung_Budiharjo,_S.Si,_M.Si."/>
@@ -204,7 +336,79 @@
         <NamedIndividual IRI="#Dr._BANDI,_M.Si.,_Ak."/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Dr._Drajat_Tri_Kartono,_M.Si."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dr._E._Muhtar,_S.Pd.,_M.Si.,_CFrA"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Dr._Istijabatul_Aliyah,_S.T.,_M.T."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dr._MARDIYANA,_M.Si."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dr._RAHMANU_WIDAYAT,_M.Sn."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dr._REVIONO,_dr.,_Sp.P_(K)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dr._SAPTA_KUNTA_PURNAMA,_M.Pd."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dr._Sutanto,_S.Si,_DEA."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dr._Techn._DEWI_WISNU_WARDANI_S.Kom,_M.S."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dr._techn._Ir._SHOLIHIN_AS’AD,_M.T."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Drs._HARJANA,_M.Si.,_M.Sc.,_Ph.D."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FEB_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FH_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FIB_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FISIP_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FKIP_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FKOR_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FK_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FMIPA_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FP_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FSRD_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FT_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HIMASTER_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#INFORMATIKA_FMIPA_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kelas_SEMWEB_UNS_2019"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Ketua_Komisi_A_UNS"/>
@@ -249,6 +453,12 @@
         <NamedIndividual IRI="#Komisi_Senat_UNS"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Member_HIMASTER_2017"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Member_HIMASTER_2018"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Prof.Dr._ADI_SULISTIYONO,_S.H.,M.H"/>
     </Declaration>
     <Declaration>
@@ -261,6 +471,12 @@
         <NamedIndividual IRI="#Prof._Dr._Dwi_Aries_Himawanto,_S.T.,_M.T."/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Prof._Dr._ISMI_DWI_ASTUTI_NURHAENI,_M.Si."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Dr._I_GUSTI_AYU_KETUT_RACHMI_HANDAYANI,_S.H.,_M.M."/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Prof._Dr._Ir._AHMAD_YUNUS,_M.S."/>
     </Declaration>
     <Declaration>
@@ -268,6 +484,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Prof._Dr._KUNCORO_DIHARJO,_S.T.,_M.T."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Dr._SAMANHUDI,_S.P.,_M.Si."/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Prof._Dr._Sigit_Santosa,_M.Pd."/>
@@ -285,7 +504,13 @@
         <NamedIndividual IRI="#Prof._Dr._Trisno_Martono,_M.M."/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Prof._Dr._WARTO,_M.Hum."/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Prof._Dr.rer.nat._SAJIDAN,_M.Si."/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof._Drs._DJOKO_SUHARDJANTO,_M.Com._(Hons).,_Ph.D.,_Ak."/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Prof._Drs._HASAN_FAUZI,_MBA,_Ph.D.,_Ak"/>
@@ -298,6 +523,18 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Rektor_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SAR_Bidang_Akademik_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SAR_Bidang_Kemahasiswaan,_Kerja_Sama,_dan_Pengembangan_Usaha_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SAR_Bidang_Keuangan_dan_Manajemen_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SEMWEB_UNS"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Sekretaris_Komisi_A_UNS"/>
@@ -324,6 +561,12 @@
         <NamedIndividual IRI="#Senat_UNS"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Staf_Ahli_Rektor_UNS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tajudda_Adi_Negara"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
     </Declaration>
     <Declaration>
@@ -342,8 +585,66 @@
         <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
     </Declaration>
     <EquivalentClasses>
+        <Class abbreviatedIRI="dbpedia-owl:Chancellor"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="dbpedia-owl:Senator"/>
+            <Class IRI="#PimpinanUniversitas"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class abbreviatedIRI="cgov:Director"/>
         <Class IRI="#Dekan"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="swrc:Lecturer"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="foaf:Person"/>
+            <ObjectComplementOf>
+                <Class abbreviatedIRI="ostop:Structure"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="vivo:Department"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHMP"/>
+            <Class IRI="#HMP"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#HMP"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="vivo:Department"/>
+            <Class abbreviatedIRI="foaf:Organization"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#KelasMataKuliah"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isKelasMataKuliahOf"/>
+            <Class IRI="#Matakuliah"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#KelasMataKuliah"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasStudent"/>
+            <Class abbreviatedIRI="vivo:Student"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#KelasMataKuliah"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasLecturer"/>
+            <Class abbreviatedIRI="swrc:Lecturer"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Member"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Member_HIMASTER_2018"/>
+            <NamedIndividual IRI="#Member_HIMASTER_2017"/>
+        </ObjectOneOf>
     </EquivalentClasses>
     <SubClassOf>
         <Class abbreviatedIRI="dbpedia-owl:Chancellor"/>
@@ -375,11 +676,19 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="parl:Leader"/>
+        <Class IRI="#HMP"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="parl:Leader"/>
         <Class IRI="#LPPM"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="parl:Leader"/>
         <Class IRI="#LPPMP"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="parl:Leader"/>
+        <Class IRI="#UKM"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="swrc:Lecturer"/>
@@ -407,7 +716,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="akt:Secretary"/>
-        <Class abbreviatedIRI="fea:Commission"/>
+        <Class IRI="#HMP"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="akt:Secretary"/>
@@ -416,6 +725,10 @@
     <SubClassOf>
         <Class abbreviatedIRI="akt:Secretary"/>
         <Class IRI="#LPPMP"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="akt:Secretary"/>
+        <Class IRI="#UKM"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#BadanPengelolaUsaha"/>
@@ -426,12 +739,32 @@
         <Class IRI="#UnitKerja"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#HMP"/>
+        <Class abbreviatedIRI="foaf:Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#KelasMataKuliah"/>
+        <Class abbreviatedIRI="medred:Study"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#LPPM"/>
         <Class IRI="#UnitKerja"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#LPPMP"/>
         <Class IRI="#UnitKerja"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Matakuliah"/>
+        <Class abbreviatedIRI="medred:Study"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Member"/>
+        <Class IRI="#HMP"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Member"/>
+        <Class IRI="#UKM"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PimpinanUniversitas"/>
@@ -450,6 +783,10 @@
         <Class IRI="#UnitKerja"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#UKM"/>
+        <Class abbreviatedIRI="foaf:Organization"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#UnitKerja"/>
         <Class abbreviatedIRI="ostop:Structure"/>
     </SubClassOf>
@@ -457,6 +794,54 @@
         <Class IRI="#ViceChancellor"/>
         <Class abbreviatedIRI="dbpedia-owl:Chancellor"/>
     </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="vivo:Student"/>
+        <NamedIndividual IRI="#Andreas_Fandy_Dwi_N"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dekan"/>
+        <NamedIndividual IRI="#Dekan_FEB_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dekan"/>
+        <NamedIndividual IRI="#Dekan_FH_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dekan"/>
+        <NamedIndividual IRI="#Dekan_FIB_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dekan"/>
+        <NamedIndividual IRI="#Dekan_FISIP_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dekan"/>
+        <NamedIndividual IRI="#Dekan_FKIP_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dekan"/>
+        <NamedIndividual IRI="#Dekan_FKOR_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dekan"/>
+        <NamedIndividual IRI="#Dekan_FK_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dekan"/>
+        <NamedIndividual IRI="#Dekan_FMIPA_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dekan"/>
+        <NamedIndividual IRI="#Dekan_FP_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dekan"/>
+        <NamedIndividual IRI="#Dekan_FSRD_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dekan"/>
+        <NamedIndividual IRI="#Dekan_FT_UNS"/>
+    </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="foaf:Person"/>
         <NamedIndividual IRI="#Dr._Agung_Budiharjo,_S.Si,_M.Si."/>
@@ -467,7 +852,103 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Dr._Drajat_Tri_Kartono,_M.Si."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Dr._E._Muhtar,_S.Pd.,_M.Si.,_CFrA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
         <NamedIndividual IRI="#Dr._Istijabatul_Aliyah,_S.T.,_M.T."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Dr._MARDIYANA,_M.Si."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Dr._RAHMANU_WIDAYAT,_M.Sn."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Dr._REVIONO,_dr.,_Sp.P_(K)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Dr._SAPTA_KUNTA_PURNAMA,_M.Pd."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Dr._Sutanto,_S.Si,_DEA."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="swrc:Lecturer"/>
+        <NamedIndividual IRI="#Dr._Techn._DEWI_WISNU_WARDANI_S.Kom,_M.S."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Dr._techn._Ir._SHOLIHIN_AS’AD,_M.T."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Drs._HARJANA,_M.Si.,_M.Sc.,_Ph.D."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="aiiso:Faculty"/>
+        <NamedIndividual IRI="#FEB_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="aiiso:Faculty"/>
+        <NamedIndividual IRI="#FH_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="aiiso:Faculty"/>
+        <NamedIndividual IRI="#FIB_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="aiiso:Faculty"/>
+        <NamedIndividual IRI="#FISIP_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="aiiso:Faculty"/>
+        <NamedIndividual IRI="#FKIP_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="aiiso:Faculty"/>
+        <NamedIndividual IRI="#FKOR_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="aiiso:Faculty"/>
+        <NamedIndividual IRI="#FK_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="aiiso:Faculty"/>
+        <NamedIndividual IRI="#FMIPA_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="aiiso:Faculty"/>
+        <NamedIndividual IRI="#FP_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="aiiso:Faculty"/>
+        <NamedIndividual IRI="#FSRD_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="aiiso:Faculty"/>
+        <NamedIndividual IRI="#FT_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HMP"/>
+        <NamedIndividual IRI="#HIMASTER_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="vivo:Department"/>
+        <NamedIndividual IRI="#INFORMATIKA_FMIPA_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#KelasMataKuliah"/>
+        <NamedIndividual IRI="#Kelas_SEMWEB_UNS_2019"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="parl:Leader"/>
@@ -526,6 +1007,14 @@
         <NamedIndividual IRI="#Komisi_Senat_UNS"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Member"/>
+        <NamedIndividual IRI="#Member_HIMASTER_2017"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Member"/>
+        <NamedIndividual IRI="#Member_HIMASTER_2018"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="foaf:Person"/>
         <NamedIndividual IRI="#Prof.Dr._ADI_SULISTIYONO,_S.H.,M.H"/>
     </ClassAssertion>
@@ -543,6 +1032,14 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Dr._ISMI_DWI_ASTUTI_NURHAENI,_M.Si."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Dr._I_GUSTI_AYU_KETUT_RACHMI_HANDAYANI,_S.H.,_M.M."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
         <NamedIndividual IRI="#Prof._Dr._Ir._AHMAD_YUNUS,_M.S."/>
     </ClassAssertion>
     <ClassAssertion>
@@ -552,6 +1049,10 @@
     <ClassAssertion>
         <Class abbreviatedIRI="foaf:Person"/>
         <NamedIndividual IRI="#Prof._Dr._KUNCORO_DIHARJO,_S.T.,_M.T."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Dr._SAMANHUDI,_S.P.,_M.Si."/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="foaf:Person"/>
@@ -575,7 +1076,15 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Dr._WARTO,_M.Hum."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
         <NamedIndividual IRI="#Prof._Dr.rer.nat._SAJIDAN,_M.Si."/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="#Prof._Drs._DJOKO_SUHARDJANTO,_M.Com._(Hons).,_Ph.D.,_Ak."/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="foaf:Person"/>
@@ -592,6 +1101,22 @@
     <ClassAssertion>
         <Class abbreviatedIRI="dbpedia-owl:Chancellor"/>
         <NamedIndividual IRI="#Rektor_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#StaffAhli"/>
+        <NamedIndividual IRI="#SAR_Bidang_Akademik_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#StaffAhli"/>
+        <NamedIndividual IRI="#SAR_Bidang_Kemahasiswaan,_Kerja_Sama,_dan_Pengembangan_Usaha_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#StaffAhli"/>
+        <NamedIndividual IRI="#SAR_Bidang_Keuangan_dan_Manajemen_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Matakuliah"/>
+        <NamedIndividual IRI="#SEMWEB_UNS"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="akt:Secretary"/>
@@ -626,6 +1151,14 @@
         <NamedIndividual IRI="#Senat_UNS"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#StaffAhli"/>
+        <NamedIndividual IRI="#Staf_Ahli_Rektor_UNS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="vivo:Student"/>
+        <NamedIndividual IRI="#Tajudda_Adi_Negara"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="vivo:University"/>
         <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
     </ClassAssertion>
@@ -650,6 +1183,76 @@
         <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHMP"/>
+        <NamedIndividual IRI="#Andreas_Fandy_Dwi_N"/>
+        <NamedIndividual IRI="#HIMASTER_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKelasMataKuliah"/>
+        <NamedIndividual IRI="#Andreas_Fandy_Dwi_N"/>
+        <NamedIndividual IRI="#Kelas_SEMWEB_UNS_2019"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isStudentOf"/>
+        <NamedIndividual IRI="#Andreas_Fandy_Dwi_N"/>
+        <NamedIndividual IRI="#INFORMATIKA_FMIPA_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Dekan_FEB_UNS"/>
+        <NamedIndividual IRI="#Prof._Drs._DJOKO_SUHARDJANTO,_M.Com._(Hons).,_Ph.D.,_Ak."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Dekan_FH_UNS"/>
+        <NamedIndividual IRI="#Prof._Dr._I_GUSTI_AYU_KETUT_RACHMI_HANDAYANI,_S.H.,_M.M."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Dekan_FIB_UNS"/>
+        <NamedIndividual IRI="#Prof._Dr._WARTO,_M.Hum."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Dekan_FISIP_UNS"/>
+        <NamedIndividual IRI="#Prof._Dr._ISMI_DWI_ASTUTI_NURHAENI,_M.Si."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Dekan_FKIP_UNS"/>
+        <NamedIndividual IRI="#Dr._MARDIYANA,_M.Si."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Dekan_FKOR_UNS"/>
+        <NamedIndividual IRI="#Dr._SAPTA_KUNTA_PURNAMA,_M.Pd."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Dekan_FK_UNS"/>
+        <NamedIndividual IRI="#Dr._REVIONO,_dr.,_Sp.P_(K)"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Dekan_FMIPA_UNS"/>
+        <NamedIndividual IRI="#Drs._HARJANA,_M.Si.,_M.Sc.,_Ph.D."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Dekan_FP_UNS"/>
+        <NamedIndividual IRI="#Prof._Dr._SAMANHUDI,_S.P.,_M.Si."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Dekan_FSRD_UNS"/>
+        <NamedIndividual IRI="#Dr._RAHMANU_WIDAYAT,_M.Sn."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Dekan_FT_UNS"/>
+        <NamedIndividual IRI="#Dr._techn._Ir._SHOLIHIN_AS’AD,_M.T."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isPersonOf"/>
         <NamedIndividual IRI="#Dr._Agung_Budiharjo,_S.Si,_M.Si."/>
         <NamedIndividual IRI="#Sekretaris_Komisi_D_UNS"/>
@@ -661,8 +1264,138 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Dr._Drajat_Tri_Kartono,_M.Si."/>
+        <NamedIndividual IRI="#SAR_Bidang_Akademik_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Dr._E._Muhtar,_S.Pd.,_M.Si.,_CFrA"/>
+        <NamedIndividual IRI="#SAR_Bidang_Keuangan_dan_Manajemen_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
         <NamedIndividual IRI="#Dr._Istijabatul_Aliyah,_S.T.,_M.T."/>
         <NamedIndividual IRI="#Sekretaris_Komisi_C_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPersonOf"/>
+        <NamedIndividual IRI="#Dr._Sutanto,_S.Si,_DEA."/>
+        <NamedIndividual IRI="#SAR_Bidang_Kemahasiswaan,_Kerja_Sama,_dan_Pengembangan_Usaha_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKelasMataKuliah"/>
+        <NamedIndividual IRI="#Dr._Techn._DEWI_WISNU_WARDANI_S.Kom,_M.S."/>
+        <NamedIndividual IRI="#Kelas_SEMWEB_UNS_2019"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isLecturerOf"/>
+        <NamedIndividual IRI="#Dr._Techn._DEWI_WISNU_WARDANI_S.Kom,_M.S."/>
+        <NamedIndividual IRI="#INFORMATIKA_FMIPA_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDekan"/>
+        <NamedIndividual IRI="#FEB_UNS"/>
+        <NamedIndividual IRI="#Dekan_FEB_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDekan"/>
+        <NamedIndividual IRI="#FH_UNS"/>
+        <NamedIndividual IRI="#Dekan_FH_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDekan"/>
+        <NamedIndividual IRI="#FISIP_UNS"/>
+        <NamedIndividual IRI="#Dekan_FISIP_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDekan"/>
+        <NamedIndividual IRI="#FKIP_UNS"/>
+        <NamedIndividual IRI="#Dekan_FKIP_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDekan"/>
+        <NamedIndividual IRI="#FKOR_UNS"/>
+        <NamedIndividual IRI="#Dekan_FKOR_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDekan"/>
+        <NamedIndividual IRI="#FK_UNS"/>
+        <NamedIndividual IRI="#Dekan_FK_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDekan"/>
+        <NamedIndividual IRI="#FMIPA_UNS"/>
+        <NamedIndividual IRI="#Dekan_FMIPA_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDepartment"/>
+        <NamedIndividual IRI="#FMIPA_UNS"/>
+        <NamedIndividual IRI="#INFORMATIKA_FMIPA_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDekan"/>
+        <NamedIndividual IRI="#FP_UNS"/>
+        <NamedIndividual IRI="#Dekan_FP_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDekan"/>
+        <NamedIndividual IRI="#FSRD_UNS"/>
+        <NamedIndividual IRI="#Dekan_FSRD_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDekan"/>
+        <NamedIndividual IRI="#FT_UNS"/>
+        <NamedIndividual IRI="#Dekan_FT_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMember"/>
+        <NamedIndividual IRI="#HIMASTER_UNS"/>
+        <NamedIndividual IRI="#Member_HIMASTER_2017"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isHMP"/>
+        <NamedIndividual IRI="#HIMASTER_UNS"/>
+        <NamedIndividual IRI="#INFORMATIKA_FMIPA_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHMP"/>
+        <NamedIndividual IRI="#INFORMATIKA_FMIPA_UNS"/>
+        <NamedIndividual IRI="#HIMASTER_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasMatakuliah"/>
+        <NamedIndividual IRI="#INFORMATIKA_FMIPA_UNS"/>
+        <NamedIndividual IRI="#SEMWEB_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStudent"/>
+        <NamedIndividual IRI="#INFORMATIKA_FMIPA_UNS"/>
+        <NamedIndividual IRI="#Tajudda_Adi_Negara"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStudent"/>
+        <NamedIndividual IRI="#INFORMATIKA_FMIPA_UNS"/>
+        <NamedIndividual IRI="#Andreas_Fandy_Dwi_N"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasLecturer"/>
+        <NamedIndividual IRI="#Kelas_SEMWEB_UNS_2019"/>
+        <NamedIndividual IRI="#Dr._Techn._DEWI_WISNU_WARDANI_S.Kom,_M.S."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStudent"/>
+        <NamedIndividual IRI="#Kelas_SEMWEB_UNS_2019"/>
+        <NamedIndividual IRI="#Andreas_Fandy_Dwi_N"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStudent"/>
+        <NamedIndividual IRI="#Kelas_SEMWEB_UNS_2019"/>
+        <NamedIndividual IRI="#Tajudda_Adi_Negara"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isKelasMataKuliahOf"/>
+        <NamedIndividual IRI="#Kelas_SEMWEB_UNS_2019"/>
+        <NamedIndividual IRI="#SEMWEB_UNS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
@@ -817,17 +1550,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDivision"/>
         <NamedIndividual IRI="#Komisi_Senat_UNS"/>
-        <NamedIndividual IRI="#Komisi_B_UNS"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasDivision"/>
-        <NamedIndividual IRI="#Komisi_Senat_UNS"/>
         <NamedIndividual IRI="#Komisi_A_UNS"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasDivision"/>
-        <NamedIndividual IRI="#Komisi_Senat_UNS"/>
-        <NamedIndividual IRI="#Komisi_D_UNS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDivision"/>
@@ -838,6 +1561,31 @@
         <ObjectProperty IRI="#hasDivision"/>
         <NamedIndividual IRI="#Komisi_Senat_UNS"/>
         <NamedIndividual IRI="#Komisi_C_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDivision"/>
+        <NamedIndividual IRI="#Komisi_Senat_UNS"/>
+        <NamedIndividual IRI="#Komisi_B_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDivision"/>
+        <NamedIndividual IRI="#Komisi_Senat_UNS"/>
+        <NamedIndividual IRI="#Komisi_D_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Member_HIMASTER_2017"/>
+        <NamedIndividual IRI="#Andreas_Fandy_Dwi_N"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#Member_HIMASTER_2017"/>
+        <NamedIndividual IRI="#Tajudda_Adi_Negara"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isMemberOf"/>
+        <NamedIndividual IRI="#Member_HIMASTER_2017"/>
+        <NamedIndividual IRI="#HIMASTER_UNS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isPersonOf"/>
@@ -931,6 +1679,41 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#SAR_Bidang_Akademik_UNS"/>
+        <NamedIndividual IRI="#Dr._Drajat_Tri_Kartono,_M.Si."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDivisionOf"/>
+        <NamedIndividual IRI="#SAR_Bidang_Akademik_UNS"/>
+        <NamedIndividual IRI="#Staf_Ahli_Rektor_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#SAR_Bidang_Kemahasiswaan,_Kerja_Sama,_dan_Pengembangan_Usaha_UNS"/>
+        <NamedIndividual IRI="#Dr._Sutanto,_S.Si,_DEA."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDivisionOf"/>
+        <NamedIndividual IRI="#SAR_Bidang_Kemahasiswaan,_Kerja_Sama,_dan_Pengembangan_Usaha_UNS"/>
+        <NamedIndividual IRI="#Staf_Ahli_Rektor_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <NamedIndividual IRI="#SAR_Bidang_Keuangan_dan_Manajemen_UNS"/>
+        <NamedIndividual IRI="#Dr._E._Muhtar,_S.Pd.,_M.Si.,_CFrA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isDivisionOf"/>
+        <NamedIndividual IRI="#SAR_Bidang_Keuangan_dan_Manajemen_UNS"/>
+        <NamedIndividual IRI="#Staf_Ahli_Rektor_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKelasMataKuliah"/>
+        <NamedIndividual IRI="#SEMWEB_UNS"/>
+        <NamedIndividual IRI="#Kelas_SEMWEB_UNS_2019"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
         <NamedIndividual IRI="#Sekretaris_Komisi_A_UNS"/>
         <NamedIndividual IRI="#Prof._Dr._Cucuk_Nur_Rosyidi,_S.T.,_M.T."/>
     </ObjectPropertyAssertion>
@@ -1020,14 +1803,104 @@
         <NamedIndividual IRI="#Komisi_Senat_UNS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDivision"/>
+        <NamedIndividual IRI="#Staf_Ahli_Rektor_UNS"/>
+        <NamedIndividual IRI="#SAR_Bidang_Kemahasiswaan,_Kerja_Sama,_dan_Pengembangan_Usaha_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDivision"/>
+        <NamedIndividual IRI="#Staf_Ahli_Rektor_UNS"/>
+        <NamedIndividual IRI="#SAR_Bidang_Keuangan_dan_Manajemen_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDivision"/>
+        <NamedIndividual IRI="#Staf_Ahli_Rektor_UNS"/>
+        <NamedIndividual IRI="#SAR_Bidang_Akademik_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isStaffAhliRektorOf"/>
+        <NamedIndividual IRI="#Staf_Ahli_Rektor_UNS"/>
+        <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasKelasMataKuliah"/>
+        <NamedIndividual IRI="#Tajudda_Adi_Negara"/>
+        <NamedIndividual IRI="#Kelas_SEMWEB_UNS_2019"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isStudentOf"/>
+        <NamedIndividual IRI="#Tajudda_Adi_Negara"/>
+        <NamedIndividual IRI="#INFORMATIKA_FMIPA_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasChancellor"/>
         <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
         <NamedIndividual IRI="#Rektor_UNS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFaculty"/>
+        <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
+        <NamedIndividual IRI="#FMIPA_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFaculty"/>
+        <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
+        <NamedIndividual IRI="#FISIP_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFaculty"/>
+        <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
+        <NamedIndividual IRI="#FEB_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFaculty"/>
+        <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
+        <NamedIndividual IRI="#FSRD_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFaculty"/>
+        <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
+        <NamedIndividual IRI="#FK_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFaculty"/>
+        <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
+        <NamedIndividual IRI="#FH_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFaculty"/>
+        <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
+        <NamedIndividual IRI="#FIB_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFaculty"/>
+        <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
+        <NamedIndividual IRI="#FKOR_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFaculty"/>
+        <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
+        <NamedIndividual IRI="#FKIP_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFaculty"/>
+        <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
+        <NamedIndividual IRI="#FT_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasFaculty"/>
+        <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
+        <NamedIndividual IRI="#FP_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasSenator"/>
         <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
         <NamedIndividual IRI="#Senat_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStaffAhliRektor"/>
+        <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
+        <NamedIndividual IRI="#Staf_Ahli_Rektor_UNS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasViceChancellor"/>
@@ -1077,16 +1950,6 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDivision"/>
         <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
-        <NamedIndividual IRI="#WR_Bidang_Akademik_UNS"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasDivision"/>
-        <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
-        <NamedIndividual IRI="#WR_Bidang_Umum_dan_Keuangan_UNS"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasDivision"/>
-        <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
         <NamedIndividual IRI="#WR_Bidang_Perencanaan_dan_Kerja_Sama_UNS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -1095,13 +1958,76 @@
         <NamedIndividual IRI="#WR_Bidang_Kemahasiswaan_dan_Alumni_UNS"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDivision"/>
+        <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
+        <NamedIndividual IRI="#WR_Bidang_Akademik_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDivision"/>
+        <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
+        <NamedIndividual IRI="#WR_Bidang_Umum_dan_Keuangan_UNS"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isViceChancellorOf"/>
         <NamedIndividual IRI="#Wakil_Rektor_UNS"/>
         <NamedIndividual IRI="#Universitas_Sebelas_Maret"/>
     </ObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="#isStudentOf"/>
+        <NamedIndividual IRI="#Dr._Techn._DEWI_WISNU_WARDANI_S.Kom,_M.S."/>
+        <NamedIndividual IRI="#INFORMATIKA_FMIPA_UNS"/>
+    </NegativeObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="wlo:name"/>
+        <NamedIndividual IRI="#Andreas_Fandy_Dwi_N"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Andreas Fandy Dwi Novianto</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Semester"/>
+        <NamedIndividual IRI="#Andreas_Fandy_Dwi_N"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#startPeriode"/>
+        <NamedIndividual IRI="#Kelas_SEMWEB_UNS_2019"/>
+        <Literal datatypeIRI="&xsd;integer">2019</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#startPeriode"/>
+        <NamedIndividual IRI="#Member_HIMASTER_2017"/>
+        <Literal datatypeIRI="&xsd;integer">2017</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Semester"/>
+        <NamedIndividual IRI="#SEMWEB_UNS"/>
+        <Literal datatypeIRI="&xsd;integer">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="wlo:name"/>
+        <NamedIndividual IRI="#Tajudda_Adi_Negara"/>
+        <Literal datatypeIRI="&xsd;string">Tajudda Adi Negara</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#NIM"/>
+        <NamedIndividual IRI="#Tajudda_Adi_Negara"/>
+        <Literal datatypeIRI="&xsd;string">M0516039</Literal>
+    </DataPropertyAssertion>
+    <NegativeDataPropertyAssertion>
+        <DataProperty IRI="#Semester"/>
+        <NamedIndividual IRI="#Andreas_Fandy_Dwi_N"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">8</Literal>
+    </NegativeDataPropertyAssertion>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="#hasDekan"/>
+        <ObjectProperty IRI="#hasDirector"/>
+    </EquivalentObjectProperties>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasFaculty"/>
-        <ObjectProperty IRI="#hasDekan"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMember"/>
+        <ObjectProperty abbreviatedIRI="swpo:hasLeader"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasSecretary"/>
@@ -1119,6 +2045,42 @@
         <ObjectProperty abbreviatedIRI="cdesc:hasCommission"/>
         <ObjectProperty IRI="#hasSenator"/>
     </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+        <ObjectProperty IRI="#isPersonOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isKelasMataKuliahOf"/>
+        <ObjectProperty IRI="#hasKelasMataKuliah"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isStudentOf"/>
+        <ObjectProperty IRI="#hasStudent"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasKelasMataKuliah"/>
+    </FunctionalObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasSenator"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isKelasMataKuliahOf"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isPersonOf"/>
+    </AsymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasDivision"/>
+    </TransitiveObjectProperty>
+    <ReflexiveObjectProperty>
+        <ObjectProperty IRI="#hasDivision"/>
+    </ReflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
+    </IrreflexiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="caresses:hasPerson"/>
         <Class abbreviatedIRI="dbpedia-owl:Chancellor"/>
@@ -1171,6 +2133,42 @@
         <ObjectProperty abbreviatedIRI="cdesc:hasCommission"/>
         <Class abbreviatedIRI="foaf:Person"/>
     </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#hasDekan"/>
+        <ObjectProperty IRI="#hasDirector"/>
+    </DisjointObjectProperties>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#NIP"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="dcterms:title"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="wlo:name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#NIM"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#NIP"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Semester"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#endPeriode"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#startPeriode"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
 </Ontology>
 
 
